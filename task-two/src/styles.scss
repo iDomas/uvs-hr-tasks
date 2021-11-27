@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-width {
+  width: 300px;
+  margin-bottom: 0.5rem;
+}
+
+.card:hover  {
+  background-color: beige;
+}
+
+.card:active {
+  background-image: linear-gradient(to right, white, beige);
+  transition: all 1s;
+}
+
+.temperature {
+  font-size: 3rem;
+  width: 50%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hourly {
+  width: 100%;
+}
+
+.daily {
+  width: 100%;
+}
+
+.temperature-small {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.2rem;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.padding-1 {
+  padding-right: 0.1rem;
+}
+
+.right {
+  padding-left: 0.5rem;
+  display: flex;
+}
+
+.left {
+  padding-left: 0.5rem;
+}

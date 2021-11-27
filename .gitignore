@@ -54,3 +54,7 @@ baseline.json
 .husky/_
 
 **/.vscode
+
+**/config.json
+
+**/.angular

@@ -1,0 +1,12 @@
+<div class="container center">
+  <div *ngIf="!!cities.length">
+      <mat-accordion [multi]="false">
+        <mat-expansion-panel *ngFor="let city of cities; let i = index" hideToggle class="card-width" (opened)="weatherPane.fetchWeather()">
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{city.name}}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-weather-pane #weatherPane [longitude]="city.longitude" [lattitude]="city.lattitude" [componentId]="i"></app-weather-pane>
+        </mat-expansion-panel>
+      </mat-accordion>
+  </div>
+</div>

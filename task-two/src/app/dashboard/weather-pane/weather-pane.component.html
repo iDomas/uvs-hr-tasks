@@ -1,0 +1,28 @@
+<div class="center">
+  <div class="header">
+    <div class="temperature">
+      <div>
+        {{temperature}}
+      </div>
+    </div>
+    <canvas id="canvas{{componentId}}" width="50" height="50"></canvas>
+  </div>
+
+</div>
+<hr/>
+<div *ngIf="forecast && forecast.hourly && forecast.daily">
+  <div class="forecast">
+    <div class="width-100">
+      <h3>Hourly</h3>
+      <div class="hourly" *ngFor="let f of forecast.hourly.data; let i = index">
+        <app-forecast [title]="'Hourly'" [componentId]="i" [date]="getTime(f.time)" [forecastTemperature]="getTemperature(f.temperature)" [skycon]="f.icon"></app-forecast>
+      </div>
+    </div>
+    <div class="width-100">
+      <h3>Daily</h3>
+      <div class="daily" *ngFor="let f of forecast.daily.data; let i = index">
+        <app-forecast [title]="'Daily'" [componentId]="i" [date]="getDate(f.time)" [forecastTemperature]="getTemperature(f.temperatureMin)" [skycon]="f.icon"></app-forecast>
+      </div>
+    </div>
+  </div>
+</div>
