@@ -3,7 +3,6 @@ import { WeatherApiService } from './../../weather-api.service';
 import { Component, Input, ElementRef } from '@angular/core';
 import { SkyCon } from 'src/app/class/SkyCon';
 import * as momentjs from 'moment'
-import { Data } from 'src/app/model/data';
 
 @Component({
   selector: 'app-weather-pane',
@@ -36,13 +35,11 @@ export class WeatherPaneComponent extends SkyCon {
 
   getTime(timestamp: number): string {
     const momentDate = momentjs.unix(timestamp).format('HH:mm')
-    console.log(momentDate);
     return momentDate
   }
 
   getDate(timestamp: number): string {
     const date = momentjs.unix(timestamp).format('MM/ddd')
-    console.log(date)
     return date;
   }
 
